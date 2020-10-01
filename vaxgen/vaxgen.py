@@ -1,5 +1,5 @@
 import numpy as np
-import pandas
+import pandas as pd
 
 from sys import argv
 
@@ -13,6 +13,11 @@ def main(hla_types_path: str, rna_seq_path: str):
     # Epitope selection
     # Output
     pass
+
+
+def run_with_clean_data(peptides: pd.DataFrame, hla_type: pd.DataFrame):
+    pass
+
 
 
 if __name__ == "__main__":

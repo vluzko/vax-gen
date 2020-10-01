@@ -1,2 +1,5 @@
+
 .vscode/
-tests/data
+.idea/
+*.egg-info/
+__pycache__/
