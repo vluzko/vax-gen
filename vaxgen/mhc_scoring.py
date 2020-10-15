@@ -1,5 +1,18 @@
 """Make MHC binding predictions for all peptides"""
+import numpy as np
 import pandas as pd
+from mhcflurry import Class1PresentationPredictor
+
+
+
+
+def score_with_mhcflurry(peptides: np.ndarray, alleles: np.ndarray):
+    predictor = Class1PresentationPredictor.load()
+    predictor_scores = predictor.predict(
+        peptides=peptides,
+        alleles=alleles,
+        verbose=0)
+
 
 
 def predict(epitopes: pd.DataFrame, hla_types: pd.DataFrame) -> pd.DataFrame:
